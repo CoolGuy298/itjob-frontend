@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     hmr: {
       protocol: 'wss', // Use WebSocket Secure if running on HTTPS
-      host: 'itjob-frontend-1.onrender.com', // Replace with your Render domain
+      host: 'itjob-frontend.onrender.com', // Replace with your Render domain
       clientPort: 443, // WebSocket port (use 443 for HTTPS)
     },
   },
