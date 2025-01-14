@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Briefcase, DollarSign, MapPin, Timer } from 'lucide-react'
+import { Briefcase, DollarSign, Timer } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -41,7 +41,7 @@ const EmployeeJobDetail = () => {
     const employee = useSelector((state: RootState) => state.employeeAuth.employee)
     const [cvFile, setCvFile] = useState<File | null>(null)
     const [error, setError] = useState('')
-    const [searchResults, setSearchResults] = useState<company>()
+    // const [searchResults, setSearchResults] = useState<company>()
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
@@ -56,7 +56,7 @@ const EmployeeJobDetail = () => {
             });
             if (response?.status === 200) {
                 const companies = response.data.companies;
-                setSearchResults(companies);
+                // setSearchResults(companies);
                 if (companies.length > 0) {
                     handleSeeCompanyDetail(companies[0]); 
                 }
@@ -74,7 +74,7 @@ const EmployeeJobDetail = () => {
             navigate(`/companyAllDetail/${result._id}`, { state: result })
         }
 
-    const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const handleClick = () => {
         console.log('Div clicked!');
         getAllCompanyData(0)
      

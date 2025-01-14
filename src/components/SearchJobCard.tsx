@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { Briefcase, DollarSign, MapPin, Timer } from 'lucide-react'
+import { Briefcase, DollarSign, Timer } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
 import { Badge } from '~/components/ui/badge'
