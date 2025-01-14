@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173
   },
   css: {
-    devSourcemap: true
+    devSourcemap: false
   },
   resolve: {
     alias: {
