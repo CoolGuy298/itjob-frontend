@@ -127,14 +127,14 @@ const Search = () => {
         const newWorkingTime = searchWorkingTime === value ? '' : value
         setWorkingTime(newWorkingTime)
     }
-    const handleSalaryChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
-        const value = e.target.value
-        if (type === 'min') {
-            setMinSalary(value)
-        } else {
-            setMaxSalary(value)
-        }
-    }
+    // const handleSalaryChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
+    //     const value = e.target.value
+    //     if (type === 'min') {
+    //         setMinSalary(value)
+    //     } else {
+    //         setMaxSalary(value)
+    //     }
+    // }
 
     const handleSeeJobDetail = (result: JobData) => {
         navigate(`/job/${result._id}`, { state: result })

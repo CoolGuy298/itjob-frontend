@@ -8,7 +8,7 @@ import { getCurrentEmployee } from './services/api'
 import { setToken, setEmployee } from '~/features/auth/employeeAuthSlice'
 import Navbar from './components/layout/Navbar'
 import { Outlet } from 'react-router-dom'
-import  Footer  from './components/layout/Footer';
+// import  Footer  from './components/layout/Footer';
 
 import { NotificationProvider } from './components/NotificationContext';
 

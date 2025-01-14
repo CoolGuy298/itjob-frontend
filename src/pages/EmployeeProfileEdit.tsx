@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 import { useSelector } from 'react-redux'
 import { RootState } from '~/store'
 import { updateEmployee } from '~/services/api'
-import { useNotification } from '~/components/NotificationContext'
+// import { useNotification } from '~/components/NotificationContext'
 
 const editableStringFields = [
     {
@@ -88,14 +88,14 @@ const editableSelectFields = [
 ]
 
 const EmployeeProfileEdit = () => {
-    const { addNotification } = useNotification()
+    // const { addNotification } = useNotification()
     const token = useSelector((state: RootState) => state.employeeAuth.employeeToken)
     const navigate = useNavigate()
     const employee = useSelector((state: RootState) => state.employeeAuth.employee)
     const [employeeData, setEmployeeData] = useState(employee)
-    const showSuccess = () => {
-        addNotification(" successfully updated", "success");
-    };
+    // const showSuccess = () => {
+    //     addNotification(" successfully updated", "success");
+    // };
 
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
