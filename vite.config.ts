@@ -6,7 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0', 
-    port: 5173
+    port: 5173,
+    hmr: {
+      protocol: 'wss', // Use WebSocket Secure if running on HTTPS
+      host: 'itjob-frontend-1.onrender.com', // Replace with your Render domain
+      clientPort: 443, // WebSocket port (use 443 for HTTPS)
+    },
   },
   build: {
     target: 'es2020', 
